@@ -1,0 +1,13 @@
+[package]
+name = "cereal-api"
+version = "0.1.0"
+authors = ["Ross Lannen <ross.lannen@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+warp = "0.2"
+tokio = { version = "0.2", features = ["full"] }
+tokio-serial = "4.3"
+mio-serial = "3.3"
+serde = "1.0"
+futures = "0.3"

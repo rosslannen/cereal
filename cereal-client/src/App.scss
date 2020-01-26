@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+// Import a Font
+
+// Set your brand colors
+
+// Update Bulma's global variables
+$gap: 16px;
+
+// Update some of Bulma's component variables
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/components/menu.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/components/tabs.sass";
+
+// Custom CSS
+html, body, #root {
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+
+  grid:
+    "header header header"
+    ".      aside  .     "
+    ".      main   .     "
+    / ($gap / 4) auto ($gap / 4);
+
+  @include desktop {
+    grid:
+      "header header header header"
+      ".      aside  main   .     "
+      / $gap ($fullhd / 6) auto $gap;
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
